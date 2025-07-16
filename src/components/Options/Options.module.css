@@ -1,0 +1,10 @@
+.group {
+  display: flex;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.button {
+  text-transform: capitalize;
+  padding: 5px;
+}
