@@ -2,9 +2,7 @@ import PropTypes from 'prop-types';
 import css from './Feedback.module.css';
 import { buttonTypes } from '../../constants';
 
-const Feedback = ({ data, totalFeedback }) => {
-  const positive = Math.round((data.good / totalFeedback) * 100);
-
+const Feedback = ({ data, totalFeedback, positive }) => {
   const feedbackList = buttonTypes.map(type => (
     <p key={type} className={css.text}>{`${type}: ${data[type]}`}</p>
   ));
@@ -25,6 +23,7 @@ Feedback.propTypes = {
     bad: PropTypes.number.isRequired,
   }).isRequired,
   totalFeedback: PropTypes.number.isRequired,
+  positive: PropTypes.number.isRequired,
 };
 
 export default Feedback;
